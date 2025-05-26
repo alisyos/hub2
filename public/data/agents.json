@@ -1,28 +1,38 @@
 [
   {
     "id": "1",
-    "name": "GPT 고객센터",
-    "description": "GPT 고객지원 시스템",
-    "category": "고객센터",
-    "isApplied": true,
-    "userPageUrl": "https://support.gptko.co.kr",
-    "adminPageUrl": "https://admin.gptko.co.kr"
-  },
-  {
-    "id": "2",
-    "name": "파트너 포털",
-    "description": "파트너사 전용 관리 시스템",
-    "category": "파트너사",
+    "name": "AI 카드뉴스 생성기",
+    "description": "세부 정보를 입력하면. AI 카드뉴스를 생성",
+    "category": "콘텐츠 제작",
     "isApplied": false,
-    "userPageUrl": "https://partner.gptko.co.kr",
-    "adminPageUrl": "https://partner-admin.gptko.co.kr"
+    "userPageUrl": "https://newscard-frontend.onrender.com/",
+    "adminPageUrl": ""
   },
   {
-    "id": "3",
-    "name": "내부 시스템",
-    "description": "직원 전용 내부 관리 도구",
-    "category": "내부시스템",
-    "isApplied": true,
-    "userPageUrl": "https://internal.gptko.co.kr"
+    "name": "AI SNS 이벤트 기획",
+    "description": "정보 입력 시 실시간으로 AI가 제안하는 맞춤형 이벤트 기획안 제공",
+    "category": "광고마케팅",
+    "isApplied": false,
+    "userPageUrl": "https://snsevent.vercel.app/",
+    "adminPageUrl": "https://snsevent.vercel.app/admin",
+    "id": "1748249604230"
+  },
+  {
+    "name": "AI 블로그 포스트 자동 작성기",
+    "description": "블로그 포스트 작성  지원 AI",
+    "category": "콘텐츠 제작",
+    "isApplied": false,
+    "userPageUrl": "https://blog-rho-seven-65.vercel.app/",
+    "adminPageUrl": "https://blog-rho-seven-65.vercel.app/admin",
+    "id": "1748249706122"
+  },
+  {
+    "name": "AI PPT 슬라이드 생성기",
+    "description": "텍스트를 입력하면 PPT 슬라이드 구성을 자동으로 생성",
+    "category": "일반사무",
+    "isApplied": false,
+    "userPageUrl": "https://ppt-liart.vercel.app/",
+    "adminPageUrl": "https://ppt-liart.vercel.app/admin",
+    "id": "1748249748804"
   }
-] 
+]
