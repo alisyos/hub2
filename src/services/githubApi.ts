@@ -47,7 +47,18 @@ export class GitHubDataService {
       }
 
       const data: GitHubFileResponse = await response.json();
-      const content = atob(data.content.replace(/\n/g, ''));
+      
+      // Base64 디코딩을 UTF-8로 올바르게 처리
+      const base64Content = data.content.replace(/\n/g, '');
+      const binaryString = atob(base64Content);
+      
+      // UTF-8 디코딩
+      const bytes = new Uint8Array(binaryString.length);
+      for (let i = 0; i < binaryString.length; i++) {
+        bytes[i] = binaryString.charCodeAt(i);
+      }
+      const content = new TextDecoder('utf-8').decode(bytes);
+      
       return JSON.parse(content);
     } catch (error) {
       console.error('Failed to fetch from GitHub:', error);
@@ -127,8 +138,18 @@ export class GitHubDataService {
 
       const fileData: GitHubFileResponse = await fileResponse.json();
       
-      // 파일 업데이트
-      const content = btoa(JSON.stringify(agents, null, 2));
+      // 파일 업데이트 - UTF-8 인코딩 후 Base64 변환
+      const jsonString = JSON.stringify(agents, null, 2);
+      const encoder = new TextEncoder();
+      const utf8Bytes = encoder.encode(jsonString);
+      
+      // Uint8Array를 binary string으로 변환
+      let binaryString = '';
+      for (let i = 0; i < utf8Bytes.length; i++) {
+        binaryString += String.fromCharCode(utf8Bytes[i]);
+      }
+      const content = btoa(binaryString);
+      
       const updateResponse = await fetch(
         `${GITHUB_API_BASE}/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`,
         {
