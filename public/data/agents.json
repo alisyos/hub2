@@ -1,0 +1,28 @@
+[
+  {
+    "id": "1",
+    "name": "GPT 고객센터",
+    "description": "GPT 고객지원 시스템",
+    "category": "고객센터",
+    "isApplied": true,
+    "userPageUrl": "https://support.gptko.co.kr",
+    "adminPageUrl": "https://admin.gptko.co.kr"
+  },
+  {
+    "id": "2",
+    "name": "파트너 포털",
+    "description": "파트너사 전용 관리 시스템",
+    "category": "파트너사",
+    "isApplied": false,
+    "userPageUrl": "https://partner.gptko.co.kr",
+    "adminPageUrl": "https://partner-admin.gptko.co.kr"
+  },
+  {
+    "id": "3",
+    "name": "내부 시스템",
+    "description": "직원 전용 내부 관리 도구",
+    "category": "내부시스템",
+    "isApplied": true,
+    "userPageUrl": "https://internal.gptko.co.kr"
+  }
+] 

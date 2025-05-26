@@ -12,7 +12,9 @@ export type OutLinkFormData = Omit<OutLink, 'id'>;
 
 export interface OutLinkContextType {
   outLinks: OutLink[];
-  addOutLink: (outLink: OutLinkFormData) => void;
-  updateOutLink: (id: string, outLink: Partial<OutLink>) => void;
-  deleteOutLink: (id: string) => void;
+  addOutLink: (outLink: OutLinkFormData) => Promise<void>;
+  updateOutLink: (id: string, outLink: Partial<OutLink>) => Promise<void>;
+  deleteOutLink: (id: string) => Promise<void>;
+  loading: boolean;
+  refreshData: () => Promise<void>;
 } 

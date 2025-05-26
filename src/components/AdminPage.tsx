@@ -4,9 +4,10 @@ import { useOutLink } from '../context/OutLinkContext';
 import { OutLink, OutLinkFormData } from '../types';
 
 const AdminPage: React.FC = () => {
-  const { outLinks, addOutLink, updateOutLink, deleteOutLink } = useOutLink();
+  const { outLinks, addOutLink, updateOutLink, deleteOutLink, loading } = useOutLink();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
+  const [saving, setSaving] = useState(false);
   const [formData, setFormData] = useState<OutLinkFormData>({
     name: '',
     description: '',
@@ -28,17 +29,24 @@ const AdminPage: React.FC = () => {
     setEditingId(null);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSaving(true);
     
-    if (editingId) {
-      updateOutLink(editingId, formData);
-    } else {
-      addOutLink(formData);
+    try {
+      if (editingId) {
+        await updateOutLink(editingId, formData);
+      } else {
+        await addOutLink(formData);
+      }
+      
+      setIsModalOpen(false);
+      resetForm();
+    } catch (error) {
+      console.error('Failed to save:', error);
+    } finally {
+      setSaving(false);
     }
-    
-    setIsModalOpen(false);
-    resetForm();
   };
 
   const handleEdit = (link: OutLink) => {
@@ -54,15 +62,36 @@ const AdminPage: React.FC = () => {
     setIsModalOpen(true);
   };
 
-  const handleDelete = (id: string) => {
+  const handleDelete = async (id: string) => {
     if (window.confirm('정말로 이 아웃링크를 삭제하시겠습니까?')) {
-      deleteOutLink(id);
+      try {
+        await deleteOutLink(id);
+      } catch (error) {
+        console.error('Failed to delete:', error);
+      }
     }
   };
 
-  const toggleAppliedStatus = (id: string, currentStatus: boolean) => {
-    updateOutLink(id, { isApplied: !currentStatus });
+  const toggleAppliedStatus = async (id: string, currentStatus: boolean) => {
+    try {
+      await updateOutLink(id, { isApplied: !currentStatus });
+    } catch (error) {
+      console.error('Failed to update status:', error);
+    }
   };
+
+  if (loading) {
+    return (
+      <div className="bg-gray-50 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center items-center h-64">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+            <span className="ml-3 text-gray-600">데이터를 불러오는 중...</span>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-gray-50 py-6">
@@ -298,10 +327,11 @@ const AdminPage: React.FC = () => {
                   </button>
                   <button
                     type="submit"
-                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                    disabled={saving}
+                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
                   >
                     <Save className="h-4 w-4 mr-2" />
-                    {editingId ? '수정' : '추가'}
+                    {saving ? '저장 중...' : (editingId ? '수정' : '추가')}
                   </button>
                 </div>
               </form>

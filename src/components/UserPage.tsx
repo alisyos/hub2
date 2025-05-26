@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { ExternalLink, Settings, CheckCircle, XCircle } from 'lucide-react';
+import { ExternalLink, Settings, CheckCircle, XCircle, RefreshCw } from 'lucide-react';
 import { useOutLink } from '../context/OutLinkContext';
 import { OutLink } from '../types';
 
 const UserPage: React.FC = () => {
-  const { outLinks } = useOutLink();
+  const { outLinks, loading, refreshData } = useOutLink();
   const [selectedCategory, setSelectedCategory] = useState<string>('전체');
+  const [refreshing, setRefreshing] = useState(false);
 
   const categories = ['전체', ...Array.from(new Set(outLinks.map(link => link.category)))];
   
@@ -27,12 +28,41 @@ const UserPage: React.FC = () => {
     window.open('https://agent.gptko.co.kr/agent', '_blank');
   };
 
+  const handleRefresh = async () => {
+    setRefreshing(true);
+    await refreshData();
+    setRefreshing(false);
+  };
+
+  if (loading) {
+    return (
+      <div className="bg-gray-50 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center items-center h-64">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+            <span className="ml-3 text-gray-600">데이터를 불러오는 중...</span>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="bg-gray-50 py-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-6">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">AI Agent Hub PoC</h1>
-          <p className="text-gray-600">다양한 AI 에이전트 서비스에 쉽게 접근하세요</p>
+        <div className="mb-6 flex justify-between items-center">
+          <div>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">AI Agent Hub PoC</h1>
+            <p className="text-gray-600">다양한 AI 에이전트 서비스에 쉽게 접근하세요</p>
+          </div>
+          <button
+            onClick={handleRefresh}
+            disabled={refreshing}
+            className="inline-flex items-center px-3 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
+          >
+            <RefreshCw className={`h-4 w-4 mr-2 ${refreshing ? 'animate-spin' : ''}`} />
+            새로고침
+          </button>
         </div>
 
         {/* 카테고리 필터 */}
