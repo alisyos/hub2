@@ -1,12 +1,12 @@
 [
   {
     "id": "1",
-    "name": "GPT 고객센터1",
-    "description": "GPT 고객지원 시스템",
-    "category": "고객센터",
-    "isApplied": true,
-    "userPageUrl": "https://support.gptko.co.kr",
-    "adminPageUrl": "https://admin.gptko.co.kr"
+    "name": "AI 카드뉴스 생성기",
+    "description": "세부 정보를 입력하면. AI 카드뉴스를 생성",
+    "category": "콘텐츠 제작",
+    "isApplied": false,
+    "userPageUrl": "https://newscard-frontend.onrender.com/",
+    "adminPageUrl": ""
   },
   {
     "id": "2",
