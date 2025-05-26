@@ -25,5 +25,14 @@
     "userPageUrl": "https://blog-rho-seven-65.vercel.app/",
     "adminPageUrl": "https://blog-rho-seven-65.vercel.app/admin",
     "id": "1748249706122"
+  },
+  {
+    "name": "AI PPT 슬라이드 생성기",
+    "description": "텍스트를 입력하면 PPT 슬라이드 구성을 자동으로 생성",
+    "category": "일반사무",
+    "isApplied": false,
+    "userPageUrl": "https://ppt-liart.vercel.app/",
+    "adminPageUrl": "https://ppt-liart.vercel.app/admin",
+    "id": "1748249748804"
   }
 ]
