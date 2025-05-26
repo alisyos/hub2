@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "name": "GPT 고객센터",
+    "name": "GPT 고객센터1",
     "description": "GPT 고객지원 시스템",
     "category": "고객센터",
     "isApplied": true,
@@ -25,4 +25,4 @@
     "isApplied": true,
     "userPageUrl": "https://internal.gptko.co.kr"
   }
-] 
+]
