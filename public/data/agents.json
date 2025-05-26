@@ -14,7 +14,16 @@
     "category": "광고마케팅",
     "isApplied": false,
     "userPageUrl": "https://snsevent.vercel.app/",
-    "adminPageUrl": "",
+    "adminPageUrl": "https://snsevent.vercel.app/admin",
     "id": "1748249604230"
+  },
+  {
+    "name": "AI 블로그 포스트 자동 작성기",
+    "description": "블로그 포스트 작성  지원 AI",
+    "category": "콘텐츠 제작",
+    "isApplied": false,
+    "userPageUrl": "https://blog-rho-seven-65.vercel.app/",
+    "adminPageUrl": "https://blog-rho-seven-65.vercel.app/admin",
+    "id": "1748249706122"
   }
 ]
