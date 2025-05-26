@@ -9,14 +9,6 @@
     "adminPageUrl": ""
   },
   {
-    "id": "3",
-    "name": "내부 시스템",
-    "description": "직원 전용 내부 관리 도구",
-    "category": "내부시스템",
-    "isApplied": true,
-    "userPageUrl": "https://internal.gptko.co.kr"
-  },
-  {
     "name": "AI SNS 이벤트 기획",
     "description": "정보 입력 시 실시간으로 AI가 제안하는 맞춤형 이벤트 기획안 제공",
     "category": "광고마케팅",
