@@ -7,7 +7,7 @@ const FILE_PATH = 'public/data/agents.json';
 
 // GitHub Personal Access Token이 필요합니다 (환경변수로 설정)
 // 현재는 읽기 전용으로 구현 (공개 저장소이므로 토큰 없이도 읽기 가능)
-const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN || '';
+const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_TOKEN || '';
 
 interface GitHubFileResponse {
   content: string;
