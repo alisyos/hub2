@@ -2,7 +2,11 @@
   "name": "outlink-management",
   "version": "1.0.0",
   "description": "AI Agent Hub PoC 페이지",
+  "type": "module",
   "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
