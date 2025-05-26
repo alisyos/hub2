@@ -53,7 +53,7 @@ const UserPage: React.FC = () => {
         <div className="mb-6 flex justify-between items-center">
           <div>
             <h1 className="text-xl font-bold text-gray-900 mb-2">AI Agent Hub 업데이트를 위한 PoC 페이지 모음입니다.</h1>
-            <p className="text-gray-600">다양한 개선의견을 주세요.</p>
+            <p className="text-gray-600">테스트 후 개선이 필요한 점을 알려주세요!</p>
           </div>
           <button
             onClick={handleRefresh}
