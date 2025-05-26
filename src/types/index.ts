@@ -17,4 +17,7 @@ export interface OutLinkContextType {
   deleteOutLink: (id: string) => Promise<void>;
   loading: boolean;
   refreshData: () => Promise<void>;
+  error: string | null;
+  saving: boolean;
+  clearError: () => void;
 } 

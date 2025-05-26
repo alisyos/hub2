@@ -4,10 +4,9 @@ import { useOutLink } from '../context/OutLinkContext';
 import { OutLink, OutLinkFormData } from '../types';
 
 const AdminPage: React.FC = () => {
-  const { outLinks, addOutLink, updateOutLink, deleteOutLink, loading } = useOutLink();
+  const { outLinks, addOutLink, updateOutLink, deleteOutLink, loading, error, saving, clearError } = useOutLink();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
-  const [saving, setSaving] = useState(false);
   const [formData, setFormData] = useState<OutLinkFormData>({
     name: '',
     description: '',
@@ -31,7 +30,6 @@ const AdminPage: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSaving(true);
     
     try {
       if (editingId) {
@@ -44,8 +42,6 @@ const AdminPage: React.FC = () => {
       resetForm();
     } catch (error) {
       console.error('Failed to save:', error);
-    } finally {
-      setSaving(false);
     }
   };
 
@@ -112,6 +108,43 @@ const AdminPage: React.FC = () => {
             새 Agent 추가
           </button>
         </div>
+
+        {/* 오류 및 상태 표시 */}
+        {error && (
+          <div className="mb-4 bg-red-50 border border-red-200 rounded-md p-4">
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <XCircle className="h-5 w-5 text-red-400" />
+              </div>
+              <div className="ml-3">
+                <p className="text-sm text-red-800">{error}</p>
+              </div>
+              <div className="ml-auto pl-3">
+                <div className="-mx-1.5 -my-1.5">
+                  <button
+                    onClick={clearError}
+                    className="inline-flex bg-red-50 rounded-md p-1.5 text-red-500 hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-red-50 focus:ring-red-600"
+                  >
+                    <X className="h-4 w-4" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {saving && (
+          <div className="mb-4 bg-blue-50 border border-blue-200 rounded-md p-4">
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
+              </div>
+              <div className="ml-3">
+                <p className="text-sm text-blue-800">저장 중...</p>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* 아웃링크 목록 */}
         <div className="bg-white shadow-sm rounded-lg overflow-hidden">
