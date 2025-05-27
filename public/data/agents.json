@@ -36,12 +36,12 @@
     "id": "1748249748804"
   },
   {
-    "name": "관리자 페이지",
-    "description": "개발 전 v0를 통해 생성한 관리자 페이지입니다.",
-    "category": "관리자",
-    "isApplied": false,
-    "userPageUrl": "https://v0.dev/chat/admin-dashboard-xsHya4MZuVa",
+    "name": "이메일 자동 생성 시스템",
+    "description": "말투를 학습하여 정확하고 효과적인 이메일을 자동으로 생성",
+    "category": "일반사무",
+    "isApplied": true,
+    "userPageUrl": "https://email-hazel-nu.vercel.app/",
     "adminPageUrl": "",
-    "id": "1748304952372"
+    "id": "1748307002345"
   }
 ]
