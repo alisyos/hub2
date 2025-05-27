@@ -34,5 +34,14 @@
     "userPageUrl": "https://ppt-liart.vercel.app/",
     "adminPageUrl": "https://ppt-liart.vercel.app/admin",
     "id": "1748249748804"
+  },
+  {
+    "name": "관리자 페이지",
+    "description": "개발 전 v0를 통해 생성한 관리자 페이지입니다.",
+    "category": "관리자",
+    "isApplied": false,
+    "userPageUrl": "https://v0.dev/chat/admin-dashboard-xsHya4MZuVa",
+    "adminPageUrl": "",
+    "id": "1748304952372"
   }
 ]
