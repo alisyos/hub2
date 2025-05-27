@@ -43,5 +43,14 @@
     "userPageUrl": "https://email-hazel-nu.vercel.app/",
     "adminPageUrl": "",
     "id": "1748307002345"
+  },
+  {
+    "name": "검색광고 경쟁력 분석 시스템",
+    "description": "AI 기반 광고 분석 및 소재 제안",
+    "category": "광고마케팅",
+    "isApplied": false,
+    "userPageUrl": "https://ad-analysis.vercel.app/",
+    "adminPageUrl": "https://ad-analysis.vercel.app/",
+    "id": "1748323260451"
   }
 ]
