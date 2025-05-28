@@ -52,5 +52,14 @@
     "userPageUrl": "https://ad-analysis.vercel.app/",
     "adminPageUrl": "https://ad-analysis.vercel.app/",
     "id": "1748323260451"
+  },
+  {
+    "name": "음성파일 기반 문서 자동화",
+    "description": "음성 파일을 업로드하여 자동으로 문서를 생성",
+    "category": "일반사무",
+    "isApplied": false,
+    "userPageUrl": "https://audio-file-psi.vercel.app/",
+    "adminPageUrl": "https://audio-file-psi.vercel.app/admin",
+    "id": "1748395370107"
   }
 ]
