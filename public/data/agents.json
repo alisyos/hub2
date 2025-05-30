@@ -70,5 +70,14 @@
     "userPageUrl": "https://crawling-code.vercel.app/",
     "adminPageUrl": "",
     "id": "1748480636630"
+  },
+  {
+    "name": "AI 문서 요약 서비스",
+    "description": "문서를 분석하고 선택한 요약안에 따라 문서 요약을 제공",
+    "category": "일반사무",
+    "isApplied": false,
+    "userPageUrl": "https://summury.vercel.app/",
+    "adminPageUrl": "https://summury.vercel.app/admin",
+    "id": "1748577793191"
   }
 ]
