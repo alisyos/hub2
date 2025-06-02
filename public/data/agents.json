@@ -79,5 +79,14 @@
     "userPageUrl": "https://summury.vercel.app/",
     "adminPageUrl": "https://summury.vercel.app/admin",
     "id": "1748577793191"
+  },
+  {
+    "name": "리뷰 분석 AI",
+    "description": "LLM모델을 활용하여 고객 리뷰를 자동으로 분석하고, 마케팅 인사이트를 제공합니다.",
+    "category": "광고마케팅",
+    "isApplied": false,
+    "userPageUrl": "https://review-inky.vercel.app/",
+    "adminPageUrl": "https://review-inky.vercel.app/admin",
+    "id": "1748853122904"
   }
 ]
