@@ -97,5 +97,14 @@
     "userPageUrl": "https://ai-report-tau.vercel.app/",
     "adminPageUrl": "https://ai-report-tau.vercel.app/admin",
     "id": "1749003491699"
+  },
+  {
+    "name": "AI 사업계획서 생성기",
+    "description": "입력한 사업아이템 정보를 기반으로 사업계획서를 제공",
+    "category": "일반사무",
+    "isApplied": false,
+    "userPageUrl": "https://business-plan-0ozk.onrender.com/",
+    "adminPageUrl": "https://business-plan-0ozk.onrender.com/admin",
+    "id": "1749028622856"
   }
 ]
