@@ -28,15 +28,15 @@ const UserPage: React.FC = () => {
         };
       case '검토완료':
         return {
-          icon: <CheckCircle className="h-4 w-4 text-blue-500 mr-1" />,
+          icon: <CheckCircle className="h-4 w-4 text-yellow-500 mr-1" />,
           text: '검토완료',
-          textColor: 'text-blue-700'
+          textColor: 'text-yellow-700'
         };
       case '검토&수정 중':
         return {
-          icon: <Clock className="h-4 w-4 text-yellow-500 mr-1" />,
+          icon: <Clock className="h-4 w-4 text-red-500 mr-1" />,
           text: '검토&수정 중',
-          textColor: 'text-yellow-700'
+          textColor: 'text-red-700'
         };
       default:
         return {
@@ -50,9 +50,9 @@ const UserPage: React.FC = () => {
   const getCardBackgroundColor = (status: AgentStatus) => {
     switch (status) {
       case '적용완료':
-        return 'bg-gray-100';
-      case '검토완료':
         return 'bg-green-100';
+      case '검토완료':
+        return 'bg-yellow-100';
       case '검토&수정 중':
         return 'bg-red-100';
       default:
