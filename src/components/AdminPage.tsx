@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, Edit2, Trash2, CheckCircle, XCircle, Save, X, ChevronDown } from 'lucide-react';
+import { Plus, Edit2, Trash2, XCircle, Save, X } from 'lucide-react';
 import { useOutLink } from '../context/OutLinkContext';
 import { OutLink, OutLinkFormData, AgentStatus } from '../types';
 
@@ -31,18 +31,7 @@ const AdminPage: React.FC = () => {
     }
   };
 
-  const getStatusIcon = (status: AgentStatus) => {
-    switch (status) {
-      case '적용완료':
-        return <CheckCircle className="h-4 w-4 mr-1" />;
-      case '검토완료':
-        return <CheckCircle className="h-4 w-4 mr-1" />;
-      case '검토&수정 중':
-        return <XCircle className="h-4 w-4 mr-1" />;
-      default:
-        return <XCircle className="h-4 w-4 mr-1" />;
-    }
-  };
+
 
   const resetForm = () => {
     setFormData({
