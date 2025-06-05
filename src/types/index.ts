@@ -1,9 +1,11 @@
+export type AgentStatus = '적용완료' | '검토&수정 중' | '검토완료';
+
 export interface OutLink {
   id: string;
   name: string;
   description: string;
   category: string;
-  isApplied: boolean;
+  status: AgentStatus;
   userPageUrl: string;
   adminPageUrl?: string;
 }

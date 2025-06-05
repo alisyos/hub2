@@ -59,12 +59,33 @@ export class GitHubDataService {
       }
       const content = new TextDecoder('utf-8').decode(bytes);
       
-      return JSON.parse(content);
+      const parsedData = JSON.parse(content);
+      
+      // 데이터 마이그레이션: isApplied를 status로 변환
+      return this.migrateData(parsedData);
     } catch (error) {
       console.error('Failed to fetch from GitHub:', error);
       // 폴백: 로컬 초기 데이터 사용
       return this.getFallbackData();
     }
+  }
+
+  private migrateData(data: any[]): OutLink[] {
+    return data.map(item => {
+      // 기존 isApplied 필드가 있으면 status로 변환
+      if (item.hasOwnProperty('isApplied') && !item.hasOwnProperty('status')) {
+        const status = item.isApplied ? '적용완료' : '검토&수정 중';
+        const { isApplied, ...rest } = item;
+        return { ...rest, status };
+      }
+      
+      // status 필드가 없으면 기본값 설정
+      if (!item.hasOwnProperty('status')) {
+        return { ...item, status: '검토&수정 중' };
+      }
+      
+      return item;
+    });
   }
 
   private getFallbackData(): OutLink[] {
@@ -74,7 +95,7 @@ export class GitHubDataService {
         name: 'GPT 고객센터',
         description: 'GPT 고객지원 시스템',
         category: '고객센터',
-        isApplied: true,
+        status: '적용완료',
         userPageUrl: 'https://support.gptko.co.kr',
         adminPageUrl: 'https://admin.gptko.co.kr'
       },
@@ -83,7 +104,7 @@ export class GitHubDataService {
         name: '파트너 포털',
         description: '파트너사 전용 관리 시스템',
         category: '파트너사',
-        isApplied: false,
+        status: '검토&수정 중',
         userPageUrl: 'https://partner.gptko.co.kr',
         adminPageUrl: 'https://partner-admin.gptko.co.kr'
       },
@@ -92,7 +113,7 @@ export class GitHubDataService {
         name: '내부 시스템',
         description: '직원 전용 내부 관리 도구',
         category: '내부시스템',
-        isApplied: true,
+        status: '적용완료',
         userPageUrl: 'https://internal.gptko.co.kr'
       }
     ];

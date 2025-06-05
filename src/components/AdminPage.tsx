@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Plus, Edit2, Trash2, CheckCircle, XCircle, Save, X } from 'lucide-react';
+import { Plus, Edit2, Trash2, CheckCircle, XCircle, Save, X, ChevronDown } from 'lucide-react';
 import { useOutLink } from '../context/OutLinkContext';
-import { OutLink, OutLinkFormData } from '../types';
+import { OutLink, OutLinkFormData, AgentStatus } from '../types';
 
 const AdminPage: React.FC = () => {
   const { outLinks, addOutLink, updateOutLink, deleteOutLink, loading, error, saving, clearError } = useOutLink();
@@ -11,17 +11,45 @@ const AdminPage: React.FC = () => {
     name: '',
     description: '',
     category: '',
-    isApplied: false,
+    status: '검토&수정 중',
     userPageUrl: '',
     adminPageUrl: ''
   });
+
+  const statusOptions: AgentStatus[] = ['적용완료', '검토&수정 중', '검토완료'];
+
+  const getStatusColor = (status: AgentStatus) => {
+    switch (status) {
+      case '적용완료':
+        return 'bg-green-100 text-green-800';
+      case '검토완료':
+        return 'bg-blue-100 text-blue-800';
+      case '검토&수정 중':
+        return 'bg-yellow-100 text-yellow-800';
+      default:
+        return 'bg-gray-100 text-gray-800';
+    }
+  };
+
+  const getStatusIcon = (status: AgentStatus) => {
+    switch (status) {
+      case '적용완료':
+        return <CheckCircle className="h-4 w-4 mr-1" />;
+      case '검토완료':
+        return <CheckCircle className="h-4 w-4 mr-1" />;
+      case '검토&수정 중':
+        return <XCircle className="h-4 w-4 mr-1" />;
+      default:
+        return <XCircle className="h-4 w-4 mr-1" />;
+    }
+  };
 
   const resetForm = () => {
     setFormData({
       name: '',
       description: '',
       category: '',
-      isApplied: false,
+      status: '검토&수정 중',
       userPageUrl: '',
       adminPageUrl: ''
     });
@@ -50,7 +78,7 @@ const AdminPage: React.FC = () => {
       name: link.name,
       description: link.description,
       category: link.category,
-      isApplied: link.isApplied,
+      status: link.status,
       userPageUrl: link.userPageUrl,
       adminPageUrl: link.adminPageUrl || ''
     });
@@ -68,9 +96,9 @@ const AdminPage: React.FC = () => {
     }
   };
 
-  const toggleAppliedStatus = async (id: string, currentStatus: boolean) => {
+  const handleStatusChange = async (id: string, newStatus: AgentStatus) => {
     try {
-      await updateOutLink(id, { isApplied: !currentStatus });
+      await updateOutLink(id, { status: newStatus });
     } catch (error) {
       console.error('Failed to update status:', error);
     }
@@ -149,22 +177,22 @@ const AdminPage: React.FC = () => {
         {/* 아웃링크 목록 */}
         <div className="bg-white shadow-sm rounded-lg overflow-hidden">
           <div className="overflow-x-auto">
-            <table className="min-w-full divide-y divide-gray-200">
+            <table className="w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
                 <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/3">
                     서비스 정보
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/6">
                     카테고리
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    URL 정보
+                  <th className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/4">
+                    URL
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    적용 상태
+                  <th className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/6">
+                    상태
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/12">
                     액션
                   </th>
                 </tr>
@@ -172,63 +200,72 @@ const AdminPage: React.FC = () => {
               <tbody className="bg-white divide-y divide-gray-200">
                 {outLinks.map((link: OutLink) => (
                   <tr key={link.id} className="hover:bg-gray-50">
-                    <td className="px-6 py-4 whitespace-nowrap">
+                    <td className="px-3 py-4">
                       <div>
-                        <div className="text-sm font-medium text-gray-900">{link.name}</div>
-                        <div className="text-sm text-gray-500">{link.description}</div>
+                        <div className="text-sm font-medium text-gray-900 truncate max-w-xs">{link.name}</div>
+                        <div className="text-xs text-gray-500 truncate max-w-xs">{link.description}</div>
                       </div>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                    <td className="px-3 py-4">
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 truncate max-w-full">
                         {link.category}
                       </span>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    <td className="px-3 py-4 text-xs text-gray-500">
                       <div className="space-y-1">
-                        <div>사용자: <span className="text-blue-600">{link.userPageUrl}</span></div>
+                        <div className="flex items-center">
+                          <span className="text-gray-400 mr-1">U:</span>
+                          <a href={link.userPageUrl} target="_blank" rel="noopener noreferrer" 
+                             className="text-blue-600 hover:text-blue-800 truncate max-w-44" 
+                             title={link.userPageUrl}>
+                            {link.userPageUrl.replace(/^https?:\/\//, '').split('/')[0]}
+                          </a>
+                        </div>
                         {link.adminPageUrl && (
-                          <div>관리자: <span className="text-purple-600">{link.adminPageUrl}</span></div>
+                          <div className="flex items-center">
+                            <span className="text-gray-400 mr-1">A:</span>
+                            <a href={link.adminPageUrl} target="_blank" rel="noopener noreferrer" 
+                               className="text-purple-600 hover:text-purple-800 truncate max-w-44" 
+                               title={link.adminPageUrl}>
+                              {link.adminPageUrl.replace(/^https?:\/\//, '').split('/')[0]}
+                            </a>
+                          </div>
                         )}
                       </div>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <button
-                        onClick={() => toggleAppliedStatus(link.id, link.isApplied)}
-                        className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${
-                          link.isApplied
-                            ? 'bg-green-100 text-green-800 hover:bg-green-200'
-                            : 'bg-red-100 text-red-800 hover:bg-red-200'
-                        }`}
-                      >
-                        {link.isApplied ? (
-                          <>
-                            <CheckCircle className="h-4 w-4 mr-1" />
-                            적용완료
-                          </>
-                        ) : (
-                          <>
-                            <XCircle className="h-4 w-4 mr-1" />
-                            미적용
-                          </>
-                        )}
-                      </button>
+                    <td className="px-3 py-4">
+                      <div className="relative inline-block w-full">
+                        <select
+                          value={link.status}
+                          onChange={(e) => handleStatusChange(link.id, e.target.value as AgentStatus)}
+                          className={`w-full px-2 py-1 rounded text-xs font-medium border cursor-pointer focus:outline-none focus:ring-1 focus:ring-blue-500 ${getStatusColor(link.status)}`}
+                        >
+                          {statusOptions.map((status) => (
+                            <option key={status} value={status}>
+                              {status}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
-                      <button
-                        onClick={() => handleEdit(link)}
-                        className="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                      >
-                        <Edit2 className="h-4 w-4 mr-1" />
-                        수정
-                      </button>
-                      
-                      <button
-                        onClick={() => handleDelete(link.id)}
-                        className="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-red-700 bg-red-100 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
-                      >
-                        <Trash2 className="h-4 w-4 mr-1" />
-                        삭제
-                      </button>
+                    <td className="px-3 py-4 text-sm font-medium">
+                      <div className="flex space-x-1">
+                        <button
+                          onClick={() => handleEdit(link)}
+                          className="inline-flex items-center p-1.5 border border-transparent rounded text-blue-700 bg-blue-100 hover:bg-blue-200 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                          title="수정"
+                        >
+                          <Edit2 className="h-3 w-3" />
+                        </button>
+                        
+                        <button
+                          onClick={() => handleDelete(link.id)}
+                          className="inline-flex items-center p-1.5 border border-transparent rounded text-red-700 bg-red-100 hover:bg-red-200 focus:outline-none focus:ring-1 focus:ring-red-500"
+                          title="삭제"
+                        >
+                          <Trash2 className="h-3 w-3" />
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 ))}
@@ -334,17 +371,22 @@ const AdminPage: React.FC = () => {
                   />
                 </div>
 
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="isApplied"
-                    checked={formData.isApplied}
-                    onChange={(e) => setFormData({ ...formData, isApplied: e.target.checked })}
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                  />
-                  <label htmlFor="isApplied" className="ml-2 block text-sm text-gray-900">
-                    적용완료 상태
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    적용 상태 *
                   </label>
+                  <select
+                    required
+                    value={formData.status}
+                    onChange={(e) => setFormData({ ...formData, status: e.target.value as AgentStatus })}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    {statusOptions.map((status) => (
+                      <option key={status} value={status}>
+                        {status}
+                      </option>
+                    ))}
+                  </select>
                 </div>
 
                 <div className="flex justify-end space-x-3 pt-4">
