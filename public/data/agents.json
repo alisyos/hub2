@@ -12,8 +12,8 @@
     "name": "SNS 이벤트 기획 AI",
     "description": " AI가 제안하는 맞춤형 SNS 이벤트 기획안 제공",
     "category": "광고마케팅",
-    "userPageUrl": "https://snsevent.vercel.app/",
-    "adminPageUrl": "https://snsevent.vercel.app/admin",
+    "userPageUrl": "https://snsevent-clean.vercel.app/",
+    "adminPageUrl": "https://snsevent-clean.vercel.app/admin",
     "id": "1748249604230",
     "status": "검토&수정 중"
   },
