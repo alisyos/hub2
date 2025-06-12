@@ -133,5 +133,14 @@
     "userPageUrl": "https://correction-pearl.vercel.app/",
     "adminPageUrl": "",
     "id": "1749533991707"
+  },
+  {
+    "name": "VBA 코드 추천 AI",
+    "description": "요청한 엑셀 작업을 VBA 코드로 자동 변환",
+    "category": "일반사무",
+    "status": "검토&수정 중",
+    "userPageUrl": "https://vba-code.vercel.app/",
+    "adminPageUrl": "",
+    "id": "1749711735832"
   }
 ]
