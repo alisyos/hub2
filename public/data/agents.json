@@ -4,8 +4,8 @@
     "name": "AI 카드뉴스 생성기",
     "description": "세부 정보를 입력하면. AI 카드뉴스를 생성",
     "category": "콘텐츠 제작",
-    "userPageUrl": "https://newscard-frontend.onrender.com/",
-    "adminPageUrl": "",
+    "userPageUrl": "https://card-news-theta.vercel.app/",
+    "adminPageUrl": "https://card-news-theta.vercel.app/admin",
     "status": "검토&수정 중"
   },
   {
