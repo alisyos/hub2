@@ -126,15 +126,6 @@
     "id": "1749521528448"
   },
   {
-    "name": "AI 문장 교정 시스템",
-    "description": "AI 기반 전문적인 문장 교정 및 정리 도구",
-    "category": "일반사무",
-    "status": "검토&수정 중",
-    "userPageUrl": "https://correction-pearl.vercel.app/",
-    "adminPageUrl": "https://correction-pearl.vercel.app/admin",
-    "id": "1749533991707"
-  },
-  {
     "name": "VBA 코드 추천 AI",
     "description": "요청한 엑셀 작업을 VBA 코드로 자동 변환",
     "category": "일반사무",
