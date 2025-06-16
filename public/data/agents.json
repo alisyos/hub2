@@ -127,7 +127,7 @@
   },
   {
     "name": "AI 문장 교정 시스템",
-    "description": "문장 교정 및 정리 도구",
+    "description": "AI 기반 전문적인 문장 교정 및 정리 도구",
     "category": "일반사무",
     "status": "검토&수정 중",
     "userPageUrl": "https://correction-pearl.vercel.app/",
