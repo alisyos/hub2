@@ -151,5 +151,14 @@
     "userPageUrl": "https://news-summary-seven.vercel.app/",
     "adminPageUrl": "",
     "id": "1750127684400"
+  },
+  {
+    "name": "면접 질문지 생성 시스템",
+    "description": "이력서 기반 직무, 경력에 맞는 맞춤형 면접 질문 생성",
+    "category": "일반사무",
+    "status": "검토&수정 중",
+    "userPageUrl": "https://interview-questionnaire.vercel.app/",
+    "adminPageUrl": "https://interview-questionnaire.vercel.app/admin",
+    "id": "1750317464911"
   }
 ]
