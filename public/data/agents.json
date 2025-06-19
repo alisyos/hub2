@@ -147,7 +147,7 @@
     "name": "뉴스기사 요약 시스템",
     "description": "뉴스 기사를 등록 시 사용자 의도에 맞춰 요약 ",
     "category": "일반사무",
-    "status": "검토&수정 중",
+    "status": "검토완료",
     "userPageUrl": "https://news-summary-seven.vercel.app/",
     "adminPageUrl": "",
     "id": "1750127684400"
