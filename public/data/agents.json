@@ -120,7 +120,7 @@
     "name": "AI 광고 문구 추천 시스템",
     "description": "매체별 가이드라인에 맞는 효과적인 광고 문구를 생성",
     "category": "광고마케팅",
-    "status": "검토&수정 중",
+    "status": "검토완료",
     "userPageUrl": "https://copywriter-system.vercel.app/",
     "adminPageUrl": "https://copywriter-system.vercel.app/admin",
     "id": "1749521528448"
