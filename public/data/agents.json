@@ -160,5 +160,14 @@
     "userPageUrl": "https://interview-questionnaire.vercel.app/",
     "adminPageUrl": "https://interview-questionnaire.vercel.app/admin",
     "id": "1750317464911"
+  },
+  {
+    "name": "AI 기반 계약서 자동생성",
+    "description": "계약 유형별 복잡한 계약서 작성을 AI가 지원",
+    "category": "일반사무",
+    "status": "검토&수정 중",
+    "userPageUrl": "https://contract2-six.vercel.app/",
+    "adminPageUrl": "https://contract2-six.vercel.app/admin",
+    "id": "1750404267671"
   }
 ]
