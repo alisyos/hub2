@@ -178,5 +178,14 @@
     "userPageUrl": "https://event-draw.vercel.app/",
     "adminPageUrl": "https://event-draw.vercel.app/admin",
     "id": "1750655364331"
+  },
+  {
+    "name": "인스타툰 스토리보드 생성기",
+    "description": "인스타툰 스토리보드 자동 생성",
+    "category": "광고마케팅",
+    "status": "검토&수정 중",
+    "userPageUrl": "https://instatoon2.vercel.app/",
+    "adminPageUrl": "",
+    "id": "1750667446903"
   }
 ]
