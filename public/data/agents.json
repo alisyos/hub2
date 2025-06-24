@@ -187,5 +187,14 @@
     "userPageUrl": "https://instatoon2.vercel.app/",
     "adminPageUrl": "",
     "id": "1750667446903"
+  },
+  {
+    "name": "스마트 파일 버전 매니저",
+    "description": "AI 기반 문서 변경사항 분석 시스템",
+    "category": "일반사무",
+    "status": "검토&수정 중",
+    "userPageUrl": "https://file-version.vercel.app/",
+    "adminPageUrl": "https://file-version.vercel.app/admin",
+    "id": "1750751669990"
   }
 ]
