@@ -205,5 +205,14 @@
     "userPageUrl": "https://idea-validation-alpha.vercel.app/",
     "adminPageUrl": "",
     "id": "1750818686728"
+  },
+  {
+    "name": "문서 각주 생성 시스템",
+    "description": "AI로 쉽고 빠른 전문용어 설명",
+    "category": "일반사무",
+    "status": "검토&수정 중",
+    "userPageUrl": "https://footnote-iota.vercel.app/",
+    "adminPageUrl": "",
+    "id": "1750989857048"
   }
 ]
