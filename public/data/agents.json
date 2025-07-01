@@ -214,5 +214,14 @@
     "userPageUrl": "https://footnote-iota.vercel.app/",
     "adminPageUrl": "",
     "id": "1750989857048"
+  },
+  {
+    "name": "플로우차트 생성",
+    "description": "차트 종류를 선택하고 프로세스를 설명해주세요.",
+    "category": "일반사무",
+    "status": "검토&수정 중",
+    "userPageUrl": "https://flowchartgenerator.vercel.app/",
+    "adminPageUrl": "",
+    "id": "1751361385882"
   }
 ]
