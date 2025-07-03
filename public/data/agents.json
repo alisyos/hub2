@@ -223,5 +223,14 @@
     "userPageUrl": "https://flowchartgenerator.vercel.app/",
     "adminPageUrl": "",
     "id": "1751361385882"
+  },
+  {
+    "name": "개발 견적 산출",
+    "description": "개발 견적 산출을 해주는 에이전트",
+    "category": "일반사무",
+    "status": "검토&수정 중",
+    "userPageUrl": "https://estimate-gold.vercel.app/",
+    "adminPageUrl": "",
+    "id": "1751539452588"
   }
 ]
