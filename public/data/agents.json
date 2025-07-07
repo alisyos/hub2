@@ -72,7 +72,7 @@
     "status": "검토완료"
   },
   {
-    "name": "AI 문서 요약 서비스",
+    "name": "9. AI 문서 요약 서비스",
     "description": "문서를 분석하고 선택한 요약안에 따라 문서 요약을 제공",
     "category": "일반사무",
     "userPageUrl": "https://summury.vercel.app/",
