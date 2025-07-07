@@ -81,7 +81,7 @@
     "status": "검토완료"
   },
   {
-    "name": "리뷰 분석 AI",
+    "name": "10. 리뷰 분석 AI",
     "description": "LLM모델을 활용하여 고객 리뷰를 자동으로 분석하고, 마케팅 인사이트를 제공합니다.",
     "category": "광고마케팅",
     "userPageUrl": "https://review-inky.vercel.app/",
