@@ -54,7 +54,7 @@
     "status": "검토완료"
   },
   {
-    "name": "음성파일 기반 문서 자동화",
+    "name": "7. 음성파일 기반 문서 자동화",
     "description": "음성 파일을 업로드하여 자동으로 문서를 생성",
     "category": "일반사무",
     "userPageUrl": "https://audio-file-psi.vercel.app/",
