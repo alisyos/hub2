@@ -99,7 +99,7 @@
     "status": "검토완료"
   },
   {
-    "name": "AI 사업계획서 생성기",
+    "name": "12. AI 사업계획서 생성기",
     "description": "입력한 사업아이템 정보를 기반으로 사업계획서를 제공",
     "category": "일반사무",
     "userPageUrl": "https://business-plan-0ozk.onrender.com/",
