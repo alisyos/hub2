@@ -90,7 +90,7 @@
     "status": "검토완료"
   },
   {
-    "name": "AI 보고서 생성기",
+    "name": "11. AI 보고서 생성기",
     "description": "OpenAI를 활용한 전문 보고서 자동 생성 시스템",
     "category": "일반사무",
     "userPageUrl": "https://ai-report-tau.vercel.app/",
