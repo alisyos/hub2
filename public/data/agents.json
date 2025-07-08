@@ -232,5 +232,14 @@
     "userPageUrl": "https://estimate-gold.vercel.app/",
     "adminPageUrl": "",
     "id": "1751539452588"
+  },
+  {
+    "name": "27. 문서 요약/질문",
+    "description": "업로드한 문서를 요약하거나 질문할 수 있는 에이전트",
+    "category": "일반사무",
+    "status": "검토&수정 중",
+    "userPageUrl": "https://document-orpin.vercel.app/",
+    "adminPageUrl": "",
+    "id": "1751937497472"
   }
 ]
