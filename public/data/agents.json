@@ -36,7 +36,7 @@
     "status": "검토완료"
   },
   {
-    "name": "5. 이메일 자동 생성 시스템",
+    "name": "1. 이메일 자동 생성 시스템",
     "description": "말투를 학습하여 정확하고 효과적인 이메일을 자동으로 생성",
     "category": "일반사무",
     "userPageUrl": "https://email-hazel-nu.vercel.app/",
