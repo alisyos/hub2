@@ -9,7 +9,7 @@
     "status": "검토완료"
   },
   {
-    "name": "1. SNS 이벤트 기획 AI",
+    "name": "2. SNS 이벤트 기획 AI",
     "description": " AI가 제안하는 맞춤형 SNS 이벤트 기획안 제공",
     "category": "광고마케팅",
     "userPageUrl": "https://snsevent-clean.vercel.app/",
