@@ -241,5 +241,14 @@
     "userPageUrl": "https://document-orpin.vercel.app/",
     "adminPageUrl": "",
     "id": "1751937497472"
+  },
+  {
+    "name": "52. AI 계약서 스캐너",
+    "description": "계약서의 불리한 조항, 모호한 표현, 법적 리스크를 식별",
+    "category": "일반사무",
+    "status": "검토&수정 중",
+    "userPageUrl": "https://contract-scanner-one.vercel.app/scanner",
+    "adminPageUrl": "https://contract-scanner-one.vercel.app/prompts",
+    "id": "1754983681208"
   }
 ]
