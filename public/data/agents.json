@@ -1,42 +1,42 @@
 [
   {
     "id": "1",
-    "name": "AI 카드뉴스 생성기",
+    "name": "3. AI 카드뉴스 생성기",
     "description": "세부 정보를 입력하면. AI 카드뉴스를 생성",
     "category": "콘텐츠 제작",
-    "userPageUrl": "https://newscard-frontend.onrender.com/",
-    "adminPageUrl": "",
-    "status": "검토&수정 중"
+    "userPageUrl": "https://card-news-theta.vercel.app/",
+    "adminPageUrl": "https://card-news-theta.vercel.app/admin",
+    "status": "검토완료"
   },
   {
-    "name": "SNS 이벤트 기획 AI",
+    "name": "2. SNS 이벤트 기획 AI",
     "description": " AI가 제안하는 맞춤형 SNS 이벤트 기획안 제공",
     "category": "광고마케팅",
-    "userPageUrl": "https://snsevent.vercel.app/",
-    "adminPageUrl": "https://snsevent.vercel.app/admin",
+    "userPageUrl": "https://snsevent-clean.vercel.app/",
+    "adminPageUrl": "https://snsevent-clean.vercel.app/admin",
     "id": "1748249604230",
-    "status": "검토&수정 중"
+    "status": "검토완료"
   },
   {
-    "name": "AI 블로그 포스트 자동 작성기",
+    "name": "4. AI 블로그 포스트 자동 작성기",
     "description": "블로그 포스트 작성  지원 AI",
     "category": "콘텐츠 제작",
     "userPageUrl": "https://blog-rho-seven-65.vercel.app/",
     "adminPageUrl": "https://blog-rho-seven-65.vercel.app/admin",
     "id": "1748249706122",
-    "status": "검토&수정 중"
+    "status": "검토완료"
   },
   {
-    "name": "AI PPT 슬라이드 생성기",
+    "name": "5. AI PPT 슬라이드 생성기",
     "description": "텍스트를 입력하면 PPT 슬라이드 구성을 자동으로 생성",
     "category": "일반사무",
     "userPageUrl": "https://ppt-liart.vercel.app/",
     "adminPageUrl": "https://ppt-liart.vercel.app/admin",
     "id": "1748249748804",
-    "status": "검토&수정 중"
+    "status": "검토완료"
   },
   {
-    "name": "이메일 자동 생성 시스템",
+    "name": "1. 이메일 자동 생성 시스템",
     "description": "말투를 학습하여 정확하고 효과적인 이메일을 자동으로 생성",
     "category": "일반사무",
     "userPageUrl": "https://email-hazel-nu.vercel.app/",
@@ -45,16 +45,16 @@
     "status": "적용완료"
   },
   {
-    "name": "검색광고 경쟁력 분석 시스템",
+    "name": "6. 파워링크 광고 문구 분석 및 제안",
     "description": "AI 기반 광고 분석 및 소재 제안",
     "category": "광고마케팅",
     "userPageUrl": "https://ad-analysis.vercel.app/",
     "adminPageUrl": "https://ad-analysis.vercel.app/",
     "id": "1748323260451",
-    "status": "검토&수정 중"
+    "status": "검토완료"
   },
   {
-    "name": "음성파일 기반 문서 자동화",
+    "name": "7. 음성파일 기반 문서 자동화",
     "description": "음성 파일을 업로드하여 자동으로 문서를 생성",
     "category": "일반사무",
     "userPageUrl": "https://audio-file-psi.vercel.app/",
@@ -63,48 +63,192 @@
     "status": "검토완료"
   },
   {
-    "name": "AI 뉴스 수집&분석 플랫폼 (크롤링 코드)",
+    "name": "8. AI 뉴스 수집&분석 플랫폼 (크롤링 코드)",
     "description": "크롤링을 통해 확보된 뉴스 데이터를 기반으로 트렌드 인사이트를 제공",
     "category": "기타",
     "userPageUrl": "https://crawling-code.vercel.app/",
     "adminPageUrl": "",
     "id": "1748480636630",
-    "status": "검토&수정 중"
+    "status": "검토완료"
   },
   {
-    "name": "AI 문서 요약 서비스",
+    "name": "9. AI 문서 요약 서비스",
     "description": "문서를 분석하고 선택한 요약안에 따라 문서 요약을 제공",
     "category": "일반사무",
     "userPageUrl": "https://summury.vercel.app/",
     "adminPageUrl": "https://summury.vercel.app/admin",
     "id": "1748577793191",
-    "status": "검토&수정 중"
+    "status": "검토완료"
   },
   {
-    "name": "리뷰 분석 AI",
+    "name": "10. 리뷰 분석 AI",
     "description": "LLM모델을 활용하여 고객 리뷰를 자동으로 분석하고, 마케팅 인사이트를 제공합니다.",
     "category": "광고마케팅",
     "userPageUrl": "https://review-inky.vercel.app/",
     "adminPageUrl": "https://review-inky.vercel.app/admin",
     "id": "1748853122904",
-    "status": "검토&수정 중"
+    "status": "검토완료"
   },
   {
-    "name": "AI 보고서 생성기",
+    "name": "11. AI 보고서 생성기",
     "description": "OpenAI를 활용한 전문 보고서 자동 생성 시스템",
     "category": "일반사무",
     "userPageUrl": "https://ai-report-tau.vercel.app/",
     "adminPageUrl": "https://ai-report-tau.vercel.app/admin",
     "id": "1749003491699",
-    "status": "검토&수정 중"
+    "status": "검토완료"
   },
   {
-    "name": "AI 사업계획서 생성기",
+    "name": "12. AI 사업계획서 생성기",
     "description": "입력한 사업아이템 정보를 기반으로 사업계획서를 제공",
     "category": "일반사무",
     "userPageUrl": "https://business-plan-0ozk.onrender.com/",
     "adminPageUrl": "https://business-plan-0ozk.onrender.com/admin",
     "id": "1749028622856",
     "status": "검토&수정 중"
+  },
+  {
+    "name": "13. AI 매출 분석 시스템",
+    "description": "매출 데이터 기반 매출 원인 분석 및 맞춤형 마케팅 전략 제안",
+    "category": "광고마케팅",
+    "status": "검토&수정 중",
+    "userPageUrl": "https://salesanalysis-pink.vercel.app/",
+    "adminPageUrl": "",
+    "id": "1749453193486"
+  },
+  {
+    "name": "14. AI 광고 문구 추천 시스템",
+    "description": "매체별 가이드라인에 맞는 효과적인 광고 문구를 생성",
+    "category": "광고마케팅",
+    "status": "검토완료",
+    "userPageUrl": "https://copywriter-system.vercel.app/",
+    "adminPageUrl": "https://copywriter-system.vercel.app/admin",
+    "id": "1749521528448"
+  },
+  {
+    "name": "15. VBA 코드 추천 AI",
+    "description": "요청한 엑셀 작업을 VBA 코드로 자동 변환",
+    "category": "일반사무",
+    "status": "검토완료",
+    "userPageUrl": "https://vba-code.vercel.app/",
+    "adminPageUrl": "",
+    "id": "1749711735832"
+  },
+  {
+    "name": "16. AI 문장 교정 시스템",
+    "description": "AI 기반 전문적인 문장 교정 및 정리 도구",
+    "category": "일반사무",
+    "status": "검토완료",
+    "userPageUrl": "https://correction-pearl.vercel.app/",
+    "adminPageUrl": "https://correction-pearl.vercel.app/admin",
+    "id": "1750041592642"
+  },
+  {
+    "name": "17. 뉴스기사 요약 시스템",
+    "description": "뉴스 기사를 등록 시 사용자 의도에 맞춰 요약 ",
+    "category": "일반사무",
+    "status": "검토완료",
+    "userPageUrl": "https://news-summary-seven.vercel.app/",
+    "adminPageUrl": "",
+    "id": "1750127684400"
+  },
+  {
+    "name": "18. 면접 질문지 생성 시스템",
+    "description": "이력서 기반 직무, 경력에 맞는 맞춤형 면접 질문 생성",
+    "category": "일반사무",
+    "status": "검토&수정 중",
+    "userPageUrl": "https://interview-questionnaire.vercel.app/",
+    "adminPageUrl": "https://interview-questionnaire.vercel.app/admin",
+    "id": "1750317464911"
+  },
+  {
+    "name": "19. AI 기반 계약서 자동생성",
+    "description": "계약 유형별 복잡한 계약서 작성을 AI가 지원",
+    "category": "일반사무",
+    "status": "검토&수정 중",
+    "userPageUrl": "https://contract2-six.vercel.app/",
+    "adminPageUrl": "https://contract2-six.vercel.app/admin",
+    "id": "1750404267671"
+  },
+  {
+    "name": "20. 이벤트 당첨자 선정 시스템",
+    "description": "참여자 목록 업로드 시 조건과 인원 수에 맞는 당첨자 자동 선정",
+    "category": "광고마케팅",
+    "status": "검토&수정 중",
+    "userPageUrl": "https://event-draw.vercel.app/",
+    "adminPageUrl": "https://event-draw.vercel.app/admin",
+    "id": "1750655364331"
+  },
+  {
+    "name": "21. 인스타툰 스토리보드 생성기",
+    "description": "인스타툰 스토리보드 자동 생성",
+    "category": "광고마케팅",
+    "status": "검토완료",
+    "userPageUrl": "https://instatoon2.vercel.app/",
+    "adminPageUrl": "",
+    "id": "1750667446903"
+  },
+  {
+    "name": "22. 스마트 파일 버전 매니저",
+    "description": "AI 기반 문서 변경사항 분석 시스템",
+    "category": "일반사무",
+    "status": "검토&수정 중",
+    "userPageUrl": "https://file-version.vercel.app/",
+    "adminPageUrl": "https://file-version.vercel.app/admin",
+    "id": "1750751669990"
+  },
+  {
+    "name": "23. 아이디어 검증 AI",
+    "description": "아이디어 기반 시장성, 차별성, 리스트를 분석",
+    "category": "일반사무",
+    "status": "검토&수정 중",
+    "userPageUrl": "https://idea-validation-alpha.vercel.app/",
+    "adminPageUrl": "",
+    "id": "1750818686728"
+  },
+  {
+    "name": "24. 문서 각주 생성 시스템",
+    "description": "AI로 쉽고 빠른 전문용어 설명",
+    "category": "일반사무",
+    "status": "검토&수정 중",
+    "userPageUrl": "https://footnote-iota.vercel.app/",
+    "adminPageUrl": "",
+    "id": "1750989857048"
+  },
+  {
+    "name": "25. 플로우차트 생성",
+    "description": "차트 종류를 선택하고 프로세스를 설명해주세요.",
+    "category": "일반사무",
+    "status": "검토&수정 중",
+    "userPageUrl": "https://flowchartgenerator.vercel.app/",
+    "adminPageUrl": "",
+    "id": "1751361385882"
+  },
+  {
+    "name": "26. 개발 견적 산출",
+    "description": "개발 견적 산출을 해주는 에이전트",
+    "category": "일반사무",
+    "status": "검토&수정 중",
+    "userPageUrl": "https://estimate-gold.vercel.app/",
+    "adminPageUrl": "",
+    "id": "1751539452588"
+  },
+  {
+    "name": "27. 문서 요약/질문",
+    "description": "업로드한 문서를 요약하거나 질문할 수 있는 에이전트",
+    "category": "일반사무",
+    "status": "검토&수정 중",
+    "userPageUrl": "https://document-orpin.vercel.app/",
+    "adminPageUrl": "",
+    "id": "1751937497472"
+  },
+  {
+    "name": "52. AI 계약서 스캐너",
+    "description": "계약서의 불리한 조항, 모호한 표현, 법적 리스크를 식별",
+    "category": "일반사무",
+    "status": "검토&수정 중",
+    "userPageUrl": "https://contract-scanner-one.vercel.app/scanner",
+    "adminPageUrl": "https://contract-scanner-one.vercel.app/prompts",
+    "id": "1754983681208"
   }
 ]
